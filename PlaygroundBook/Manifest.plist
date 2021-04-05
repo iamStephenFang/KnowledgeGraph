@@ -7,7 +7,7 @@
 	<key>ContentIdentifier</key>
 	<string>$(PLAYGROUND_BOOK_CONTENT_IDENTIFIER)</string>
 	<key>ContentVersion</key>
-	<string>$(PLAYGROUND_BOOK_CONTENT_VERSION)</string>
+	<string>1.0</string>
 	<key>DevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>DeploymentTarget</key>
@@ -15,7 +15,7 @@
 	<key>SwiftVersion</key>
 	<string>$(SWIFT_VERSION)</string>
 	<key>Name</key>
-	<string>PlaygroundBookName</string>
+	<string>A Tour In Knowledge Graph</string>
 	<key>Chapters</key>
 	<array>
 		<string>Chapter1.playgroundchapter</string>
@@ -28,5 +28,7 @@
 	<string>Full</string>
 	<key>SupportsDarkMode</key>
 	<true/>
+	<key>ImageReference</key>
+	<string>icon.png</string>
 </dict>
 </plist>
