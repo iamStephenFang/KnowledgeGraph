@@ -12,13 +12,12 @@
 //: - - -
 //: ## What is a Knowledge Graph?
 //: The knowledge graph represents a collection of interlinked descriptions of entities – real-world objects and events, situations or abstract concepts.
+//: A knowledge graph can be simply understood as a multi-relational graph, i.e., a graph containing multiple types of nodes and multiple types of edges.
 //:
-//: ### Types of Recommendation Systems
-//: **Collaborative filtering** uses the known behavior of a group of users to make recommendations for others. For example, by using the data from other users who have similar preferences about a group of items, you can predict whether a particular user is likely to be interested in an item.
+//: ### Storage methods of Knowledge Graph
+//: **RDF** RDF stands for Resource Description Framework and it’s a W3C standard for data exchange in the Web. RDF consists of nodes and edges. Nodes represent entities and resources, attributes, while edges represent the relationship between entities and entities, as well as the relationship between entities and attributes.
 //:
-//: **Content-based filtering** makes use of the comparison between items and the past preferences of a particular user. That is, the items which have similar properties to the ones that the user liked or checked previously are likely to be recommended.
-//:
-//: ## Item-to-Item Collaborative Filtering
-//: Item-based collaborative filtering was launched by Amazon.com in 1998, which dramatically improved the scalability of recommender systems. The algorithm calculates the similarities between different items in the dataset, then these similarity values are used to predict ratings for user-item pairs not present in the dataset.
+//: **Graph Database** Graph database is a database that uses graph structure for semantic query, which uses nodes, edges and attributes to represent and store data. The key concept of the system is graph, which directly associates the data items in storage with the set of edges that represent the relationship between data nodes and nodes.
+
 //: - - -
 //: ## [Next page](@next)

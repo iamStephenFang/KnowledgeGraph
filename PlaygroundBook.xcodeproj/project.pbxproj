@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D2771AD2625EA82000E2ECB /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2771AC2625EA82000E2ECB /* IntroView.swift */; };
 		4D79301B261B647D0010F4C0 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D79301A261B647D0010F4C0 /* icon.png */; };
 		5E086DCA2051DDAE004D8D25 /* LiveView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E086DCC2051DDAE004D8D25 /* LiveView.storyboard */; };
 		5E086DD32051E3A3004D8D25 /* Manifest.plist in Copy Book Contents */ = {isa = PBXBuildFile; fileRef = 5E086DCF2051DF0F004D8D25 /* Manifest.plist */; };
@@ -133,6 +134,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D2771AC2625EA82000E2ECB /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		4D79301A261B647D0010F4C0 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		5E086DC02051C5A7004D8D25 /* A Tour In Knowledge Graph.playgroundbook */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "A Tour In Knowledge Graph.playgroundbook"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E086DC72051DD03004D8D25 /* BookOverridingBuildSettings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BookOverridingBuildSettings.xcconfig; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				5E7067A323678E220094BDEF /* SharedCode.swift */,
+				4D2771AC2625EA82000E2ECB /* IntroView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -595,6 +598,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E6F7E7D2368FF29008CC191 /* SharedCode.swift in Sources */,
+				4D2771AD2625EA82000E2ECB /* IntroView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
