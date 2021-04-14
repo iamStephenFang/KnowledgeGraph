@@ -9,15 +9,17 @@
 
 //: # Introduction to Knowledge Graph
 //: Welcome to *A Tour In Knowledge Graph*, in this swift playground, you will learn the basic ideas about knowledge graph.
+//:
+//: Before entering the playground, I want you to think about what is the difference between Information and Knowledge.
+//: - - -
+//: ## What is the difference between Information and Knowledge?
+//: You can find an abstract answer from the picture on the right. Brifely speaking, knowledge can be achieved by establishing the relationship between entities on the basis of information. The entities are usually the real-world objects, events, situations or abstract concepts.
+//:
+//: Now that you know the difference between information and knowledge, I believe that you can understand what is knowledge graph as well.
 //: - - -
 //: ## What is a Knowledge Graph?
-//: The knowledge graph represents a collection of interlinked descriptions of entities – real-world objects and events, situations or abstract concepts.
-//: A knowledge graph can be simply understood as a multi-relational graph, i.e., a graph containing multiple types of nodes and multiple types of edges.
+//: The knowledge graph represents a collection of interlinked descriptions of entities.
 //:
-//: ### Storage methods of Knowledge Graph
-//: **RDF** RDF stands for Resource Description Framework and it’s a W3C standard for data exchange in the Web. RDF consists of nodes and edges. Nodes represent entities and resources, attributes, while edges represent the relationship between entities and entities, as well as the relationship between entities and attributes.
-//:
-//: **Graph Database** Graph database is a database that uses graph structure for semantic query, which uses nodes, edges and attributes to represent and store data. The key concept of the system is graph, which directly associates the data items in storage with the set of edges that represent the relationship between data nodes and nodes.
-
+//: A knowledge graph can be simply understood as a multi-relational graph, i.e., a graph containing multiple types of nodes and multiple types of edges. 
 //: - - -
 //: ## [Next page](@next)
