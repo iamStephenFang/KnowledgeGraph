@@ -7,13 +7,16 @@
 import UIKit
 import SwiftUI
 
+public var KnowledgeGraph = drawComposition(firstEntity: "Apple", nextEntity: "Fruit", relation: "is a")
+
 class BasicViewController: UIViewController {
-    @Published var graph = Graph.sampleGraph()
+//    @Published var graph = Graph.sampleGraph()
+    @Published var graph = KnowledgeGraph
     @Published var selection = SelectionHandler()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let content = GraphDemoView(graph: graph, selection: selection)
+        let content = BasicGraphView(graph: graph, selection: selection)
         let contentView = UIHostingController(rootView: content)
         addChild(contentView)
         view.addSubview(contentView.view)

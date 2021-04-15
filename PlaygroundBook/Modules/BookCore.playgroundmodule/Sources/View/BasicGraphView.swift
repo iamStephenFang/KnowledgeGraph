@@ -1,12 +1,12 @@
 //
-//  GraphDemoView.swift
+//  BasicGraphView.swift
 //  UserModule
 //
 //  Created by StephenFang on 2021/4/14.
 //
 import SwiftUI
 
-struct GraphDemoView: View {
+struct BasicGraphView: View {
   @ObservedObject var graph: Graph
   @ObservedObject var selection: SelectionHandler
   
@@ -23,7 +23,7 @@ struct GraphDemoView: View {
       VStack {
         GeometryReader { geometry in
           ZStack {
-            Rectangle().fill(Color.white)
+            Rectangle().fill(Color.clear)
             GraphView(selection: self.selection, graph: self.graph)
               .scaleEffect(self.zoomScale)
               .offset(
@@ -56,7 +56,7 @@ struct GraphDemoView: View {
     }
 }
 
-extension GraphDemoView {
+extension BasicGraphView {
   func distance(from pointA: CGPoint, to pointB: CGPoint) -> CGFloat {
     let xdelta = pow(pointA.x - pointB.x, 2)
     let ydelta = pow(pointA.y - pointB.y, 2)

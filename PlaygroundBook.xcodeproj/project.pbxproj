@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		4D79301B261B647D0010F4C0 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D79301A261B647D0010F4C0 /* icon.png */; };
-		4DD51CD126273A8B004F1146 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51CD026273A8B004F1146 /* Node.swift */; };
-		4DD51CD726273ABD004F1146 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51CD626273ABD004F1146 /* Extension.swift */; };
-		4DD51CDD26273C2C004F1146 /* NodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51CDC26273C2C004F1146 /* NodeView.swift */; };
-		4DD51CE326273CC4004F1146 /* SelectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51CE226273CC4004F1146 /* SelectionHandler.swift */; };
-		4DD51CED26273DB8004F1146 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51CEC26273DB8004F1146 /* Graph.swift */; };
-		4DD51CF326273DFA004F1146 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51CF226273DFA004F1146 /* Edge.swift */; };
-		4DD51CF926273E2D004F1146 /* EdgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51CF826273E2D004F1146 /* EdgeView.swift */; };
-		4DD51CFF26273E89004F1146 /* NodeGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51CFE26273E89004F1146 /* NodeGraphView.swift */; };
-		4DD51D0526273EBC004F1146 /* EdgeGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51D0426273EBC004F1146 /* EdgeGraphView.swift */; };
-		4DD51D0B26273F0F004F1146 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51D0A26273F0F004F1146 /* GraphView.swift */; };
-		4DD51D1526273F7D004F1146 /* GraphDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51D1426273F7D004F1146 /* GraphDemoView.swift */; };
-		4DD51D292627450B004F1146 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51D282627450B004F1146 /* BasicViewController.swift */; };
+		4DD51D59262890CA004F1146 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51D0A26273F0F004F1146 /* GraphView.swift */; };
+		4DD51D5A262890CA004F1146 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51D282627450B004F1146 /* BasicViewController.swift */; };
+		4DD51D5B262890CA004F1146 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51CD026273A8B004F1146 /* Node.swift */; };
+		4DD51D5C262890CA004F1146 /* SelectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51CE226273CC4004F1146 /* SelectionHandler.swift */; };
+		4DD51D5D262890CA004F1146 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51CEC26273DB8004F1146 /* Graph.swift */; };
+		4DD51D5E262890CA004F1146 /* NodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51CDC26273C2C004F1146 /* NodeView.swift */; };
+		4DD51D5F262890CA004F1146 /* NodeGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51CFE26273E89004F1146 /* NodeGraphView.swift */; };
+		4DD51D60262890CA004F1146 /* EdgeGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51D0426273EBC004F1146 /* EdgeGraphView.swift */; };
+		4DD51D61262890CA004F1146 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51CD626273ABD004F1146 /* Extension.swift */; };
+		4DD51D62262890CA004F1146 /* BasicGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51D1426273F7D004F1146 /* BasicGraphView.swift */; };
+		4DD51D63262890CA004F1146 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51CF226273DFA004F1146 /* Edge.swift */; };
+		4DD51D64262890CA004F1146 /* EdgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51CF826273E2D004F1146 /* EdgeView.swift */; };
 		5E086DCA2051DDAE004D8D25 /* LiveView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E086DCC2051DDAE004D8D25 /* LiveView.storyboard */; };
 		5E086DD32051E3A3004D8D25 /* Manifest.plist in Copy Book Contents */ = {isa = PBXBuildFile; fileRef = 5E086DCF2051DF0F004D8D25 /* Manifest.plist */; };
 		5E3196F32061DEA40077BBD7 /* LiveViewSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3196F22061DEA40077BBD7 /* LiveViewSupport.swift */; };
@@ -155,7 +155,7 @@
 		4DD51CFE26273E89004F1146 /* NodeGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeGraphView.swift; sourceTree = "<group>"; };
 		4DD51D0426273EBC004F1146 /* EdgeGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeGraphView.swift; sourceTree = "<group>"; };
 		4DD51D0A26273F0F004F1146 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
-		4DD51D1426273F7D004F1146 /* GraphDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphDemoView.swift; sourceTree = "<group>"; };
+		4DD51D1426273F7D004F1146 /* BasicGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicGraphView.swift; sourceTree = "<group>"; };
 		4DD51D282627450B004F1146 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		5E086DC02051C5A7004D8D25 /* A Tour In Knowledge Graph.playgroundbook */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "A Tour In Knowledge Graph.playgroundbook"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E086DC72051DD03004D8D25 /* BookOverridingBuildSettings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BookOverridingBuildSettings.xcconfig; sourceTree = "<group>"; };
@@ -220,6 +220,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DD51D54262890BE004F1146 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4DD51CE226273CC4004F1146 /* SelectionHandler.swift */,
+				4DD51CD026273A8B004F1146 /* Node.swift */,
+				4DD51CEC26273DB8004F1146 /* Graph.swift */,
+				4DD51CF226273DFA004F1146 /* Edge.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4DD51D692628934F004F1146 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4DD51D1426273F7D004F1146 /* BasicGraphView.swift */,
+				4DD51CDC26273C2C004F1146 /* NodeView.swift */,
+				4DD51CF826273E2D004F1146 /* EdgeView.swift */,
+				4DD51D0A26273F0F004F1146 /* GraphView.swift */,
+				4DD51D0426273EBC004F1146 /* EdgeGraphView.swift */,
+				4DD51CFE26273E89004F1146 /* NodeGraphView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4DD51D6E26289366004F1146 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				4DD51D282627450B004F1146 /* BasicViewController.swift */,
+				4DD51CD626273ABD004F1146 /* Extension.swift */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
 		5E086DA4204F706E004D8D25 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +363,9 @@
 		5E70679D23678DA00094BDEF /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				4DD51D6E26289366004F1146 /* Basic */,
+				4DD51D692628934F004F1146 /* View */,
+				4DD51D54262890BE004F1146 /* Model */,
 				5EF2F9AD2054BBF300191409 /* LiveViewController.swift */,
 				5E3196F22061DEA40077BBD7 /* LiveViewSupport.swift */,
 			);
@@ -355,18 +391,6 @@
 		5E7067A223678E0D0094BDEF /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				4DD51CD026273A8B004F1146 /* Node.swift */,
-				4DD51CD626273ABD004F1146 /* Extension.swift */,
-				4DD51CDC26273C2C004F1146 /* NodeView.swift */,
-				4DD51CE226273CC4004F1146 /* SelectionHandler.swift */,
-				4DD51CEC26273DB8004F1146 /* Graph.swift */,
-				4DD51CF226273DFA004F1146 /* Edge.swift */,
-				4DD51CF826273E2D004F1146 /* EdgeView.swift */,
-				4DD51CFE26273E89004F1146 /* NodeGraphView.swift */,
-				4DD51D0426273EBC004F1146 /* EdgeGraphView.swift */,
-				4DD51D0A26273F0F004F1146 /* GraphView.swift */,
-				4DD51D1426273F7D004F1146 /* GraphDemoView.swift */,
-				4DD51D282627450B004F1146 /* BasicViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -627,18 +651,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DD51D1526273F7D004F1146 /* GraphDemoView.swift in Sources */,
-				4DD51CF926273E2D004F1146 /* EdgeView.swift in Sources */,
-				4DD51CE326273CC4004F1146 /* SelectionHandler.swift in Sources */,
-				4DD51D292627450B004F1146 /* BasicViewController.swift in Sources */,
-				4DD51CF326273DFA004F1146 /* Edge.swift in Sources */,
-				4DD51CED26273DB8004F1146 /* Graph.swift in Sources */,
-				4DD51CDD26273C2C004F1146 /* NodeView.swift in Sources */,
-				4DD51CD126273A8B004F1146 /* Node.swift in Sources */,
-				4DD51CD726273ABD004F1146 /* Extension.swift in Sources */,
-				4DD51CFF26273E89004F1146 /* NodeGraphView.swift in Sources */,
-				4DD51D0526273EBC004F1146 /* EdgeGraphView.swift in Sources */,
-				4DD51D0B26273F0F004F1146 /* GraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,8 +666,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DD51D62262890CA004F1146 /* BasicGraphView.swift in Sources */,
+				4DD51D60262890CA004F1146 /* EdgeGraphView.swift in Sources */,
+				4DD51D5F262890CA004F1146 /* NodeGraphView.swift in Sources */,
 				5E3196F32061DEA40077BBD7 /* LiveViewSupport.swift in Sources */,
+				4DD51D5C262890CA004F1146 /* SelectionHandler.swift in Sources */,
+				4DD51D63262890CA004F1146 /* Edge.swift in Sources */,
+				4DD51D61262890CA004F1146 /* Extension.swift in Sources */,
+				4DD51D5E262890CA004F1146 /* NodeView.swift in Sources */,
+				4DD51D5D262890CA004F1146 /* Graph.swift in Sources */,
+				4DD51D64262890CA004F1146 /* EdgeView.swift in Sources */,
+				4DD51D5B262890CA004F1146 /* Node.swift in Sources */,
+				4DD51D5A262890CA004F1146 /* BasicViewController.swift in Sources */,
 				5EF2F9AE2054BBF300191409 /* LiveViewController.swift in Sources */,
+				4DD51D59262890CA004F1146 /* GraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -911,9 +935,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_ENTITLEMENTS = LiveViewTestApp/LiveViewTestApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U9ND6HRPEN;
 				GCC_DYNAMIC_NO_PIC = NO;
 				INFOPLIST_FILE = LiveViewTestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -921,7 +946,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-all_load";
-				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER_PREFIX).LiveViewTestApp";
+				PRODUCT_BUNDLE_IDENTIFIER = me.stephenfang.LiveViewTestAppDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -938,16 +963,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_ENTITLEMENTS = LiveViewTestApp/LiveViewTestApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U9ND6HRPEN;
 				INFOPLIST_FILE = LiveViewTestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-all_load";
-				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER_PREFIX).LiveViewTestApp";
+				PRODUCT_BUNDLE_IDENTIFIER = me.stephenfang.LiveViewTestAppDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
