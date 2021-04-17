@@ -41,12 +41,6 @@ public class Graph: ObservableObject {
 }
 
 extension Graph {
-    func updateNodeText(_ srcNode: Node, string: String) {
-        var newNode = srcNode
-        newNode.text = string
-        replace(srcNode, with: newNode)
-    }
-    
     func positionNode(_ node: Node, position: CGPoint) {
         var movedNode = node
         movedNode.position = position
@@ -65,12 +59,18 @@ extension Graph {
     
     func addNode(_ node: Node) {
         nodes.append(node)
-        if (node.position == CGPoint.zero) {
-            let randomPosition = CGPoint(x: CGFloat.offsets.randomItem(), y: CGFloat.offsets.randomItem())
-            self.positionNode(node, position: randomPosition)
-        }
     }
     
+    func deleteNode(_ nodeToDelete: NodeID) {
+        if let delete = nodes.firstIndex(where: { $0.id == nodeToDelete }) {
+          nodes.remove(at: delete)
+          let remainingEdges = edges.filter({ $0.end != nodeToDelete && $0.start != nodeToDelete })
+          edges = remainingEdges
+        }
+      rebuildLinks()
+    }
+    
+        
     func connect(_ parent: Node, to child: Node, relation: String) {
         let newedge = Edge(start: parent.id, end: child.id, text: relation)
         let exists = edges.contains(where: { edge in
@@ -82,27 +82,25 @@ extension Graph {
         edges.append(newedge)
     }
     
-    func addRelation(_ parent: Node, to child: Node, relation: String){
-        let center = parent.position
-        let radius = 200.0
+    func addRelation(_ entity: Node, to anotherEntity: Node, relation: String){
+        let center = entity.position
+        let radius = 300.0
         let angle = CGFloat.random(in: 1.0..<360.0) * CGFloat.pi/180.0
         let point = CGPoint(x: center.x + CGFloat(radius) * cos(angle), y: center.y + CGFloat(radius) * sin(angle))
         
-        self.positionNode(child, position: point)
-        connect(parent, to: child, relation: relation)
+        self.positionNode(anotherEntity, position: point)
+        connect(entity, to: anotherEntity, relation: relation)
         rebuildLinks()
     }
     
-    static func sampleGraph() -> Graph {
-        let graph = Graph()
-        let child1 = Node(text: "child 1")
-        let child2 = Node(text: "child 2")
-        graph.addNode(child1)
-        graph.addNode(child2)
-        graph.positionNode(child1, position: CGPoint(x: 100, y: 0))
-        graph.positionNode(child2, position: CGPoint(x: -100, y: 0))
-        graph.connect(child1, to: child2, relation: "Demo")
-        return graph
+    func deleteNode(_ entity: Node) {
+      deleteNode(entity.id)
+    }
+
+    func updateEntity(_ entity: Node, relation: String) {
+        var newNode = entity
+        newNode.text = relation
+        replace(entity, with: newNode)
     }
 }
 

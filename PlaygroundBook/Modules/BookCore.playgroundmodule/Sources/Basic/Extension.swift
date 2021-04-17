@@ -47,10 +47,6 @@ extension Array {
     }
 }
 
-extension CGFloat {
-    static let offsets: [CGFloat] = [-175.0, -140.0, -105.0, -70.0, -35.0, 0.0, 35.0, 70.0, 105.0, 140.0, 175.0]
-}
-
 extension UIColor {
     convenience init(red: Int, green: Int, blue: Int) {
         self.init(red: CGFloat(red) / 255, green: CGFloat(green) / 255, blue: CGFloat(blue) / 255, alpha: 1)

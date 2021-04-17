@@ -19,7 +19,7 @@ struct NodeView: View {
     Ellipse()
       .fill(Color(node.color))
       .overlay(Ellipse()
-                .stroke(isSelected ? Color.black : Color.clear, lineWidth: 2 ))
+                .stroke(isSelected ? Color.primary : Color.clear, lineWidth: 2 ))
       .overlay(Text(node.text)
                 .foregroundColor(.white)
                 .multilineTextAlignment(.center)
