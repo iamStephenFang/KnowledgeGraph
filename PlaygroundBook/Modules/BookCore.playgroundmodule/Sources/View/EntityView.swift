@@ -7,23 +7,23 @@
 
 import SwiftUI
 
-struct NodeView: View {
+struct EntityView: View {
   static let width = CGFloat(100)
-  @State var node: Node
+  @State var entity: Entity
   @ObservedObject var selection: SelectionHandler
   var isSelected: Bool {
-    return selection.isNodeSelected(node)
+    return selection.isEntitySelected(entity)
   }
   
   var body: some View {
     Ellipse()
-      .fill(Color(node.color))
+      .fill(Color(entity.color))
       .overlay(Ellipse()
                 .stroke(isSelected ? Color.primary : Color.clear, lineWidth: 2 ))
-      .overlay(Text(node.text)
+      .overlay(Text(entity.text)
                 .foregroundColor(.white)
                 .multilineTextAlignment(.center)
                 .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8)))
-      .frame(width: NodeView.width, height: NodeView.width, alignment: .center)
+      .frame(width: EntityView.width, height: EntityView.width, alignment: .center)
   }
 }

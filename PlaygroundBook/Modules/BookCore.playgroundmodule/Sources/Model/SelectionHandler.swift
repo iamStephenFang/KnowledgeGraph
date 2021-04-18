@@ -9,43 +9,40 @@ import Foundation
 import CoreGraphics
 
 struct DragInfo {
-  var id: NodeID
+  var id: EntityID
   var originalPosition: CGPoint
 }
 
 class SelectionHandler: ObservableObject {
-  @Published var draggingNodes: [DragInfo] = []
-  @Published private(set) var selectedNodeIDs: [NodeID] = []
+  @Published var draggingEntities: [DragInfo] = []
+  @Published private(set) var selectedEntityIDs: [EntityID] = []
   
-  @Published var editingText: String = ""
-  
-  func selectNode(_ node: Node) {
-    selectedNodeIDs = [node.id]
-    editingText = node.text
+  func selectEntity(_ entity: Entity) {
+    selectedEntityIDs = [entity.id]
   }
   
-  func isNodeSelected(_ node: Node) -> Bool {
-    return selectedNodeIDs.contains(node.id)
+  func isEntitySelected(_ entity: Entity) -> Bool {
+    return selectedEntityIDs.contains(entity.id)
   }
   
-  func onlySelectedNode(in graph: Graph) -> Node? {
-    let selectedNodes = self.selectedNodes(in: graph)
-    if selectedNodes.count == 1 {
-      return selectedNodes.first
+  func onlySelectedEntity(in graph: Graph) -> Entity? {
+    let selectedEntities = self.selectedEntities(in: graph)
+    if selectedEntities.count == 1 {
+      return selectedEntities.first
     }
     return nil
   }
   
-  func selectedNodes(in graph: Graph) -> [Node] {
-    return selectedNodeIDs.compactMap { graph.nodeWithID($0) }
+  func selectedEntities(in graph: Graph) -> [Entity] {
+    return selectedEntityIDs.compactMap { graph.entityWithID($0) }
   }
   
   func startDragging(_ graph: Graph) {
-    draggingNodes = selectedNodes(in: graph)
+    draggingEntities = selectedEntities(in: graph)
       .map { DragInfo(id: $0.id, originalPosition: $0.position) }
   }
   
   func stopDragging(_ graph: Graph) {
-    draggingNodes = []
+    draggingEntities = []
   }
 }

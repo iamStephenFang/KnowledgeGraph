@@ -15,7 +15,7 @@ struct GraphView: View {
     ZStack {
       Rectangle().fill(Color.clear)
       EdgeGraphView(edges: $graph.links)
-      NodeGraphView(selection: selection, nodes: $graph.nodes)
+      EntityGraphView(selection: selection, entities: $graph.entities)
     }
   }
 }

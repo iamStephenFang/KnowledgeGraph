@@ -15,7 +15,7 @@
 	<key>SwiftVersion</key>
 	<string>$(SWIFT_VERSION)</string>
 	<key>Name</key>
-	<string>A Tour In Knowledge Graph</string>
+	<string>First Taste Of Knowledge Graph</string>
 	<key>Chapters</key>
 	<array>
 		<string>Chapter1.playgroundchapter</string>

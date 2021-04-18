@@ -12,8 +12,8 @@ typealias EdgeID = UUID
 
 struct Edge: Identifiable {
   var id = EdgeID()
-  var start: NodeID
-  var end: NodeID
+  var start: EntityID
+  var end: EntityID
   var text: String
 }
 
