@@ -21,6 +21,7 @@
 		4DD51D63262890CA004F1146 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51CF226273DFA004F1146 /* Edge.swift */; };
 		4DD51D64262890CA004F1146 /* EdgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51CF826273E2D004F1146 /* EdgeView.swift */; };
 		4DF2DBD7262BBBFD0059F892 /* GraphExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2DBD6262BBBFD0059F892 /* GraphExample.swift */; };
+		4DF2DBFE262C79780059F892 /* QAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2DBFD262C79780059F892 /* QAView.swift */; };
 		5E086DCA2051DDAE004D8D25 /* LiveView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E086DCC2051DDAE004D8D25 /* LiveView.storyboard */; };
 		5E086DD32051E3A3004D8D25 /* Manifest.plist in Copy Book Contents */ = {isa = PBXBuildFile; fileRef = 5E086DCF2051DF0F004D8D25 /* Manifest.plist */; };
 		5E3196F32061DEA40077BBD7 /* LiveViewSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3196F22061DEA40077BBD7 /* LiveViewSupport.swift */; };
@@ -159,6 +160,7 @@
 		4DD51D1426273F7D004F1146 /* BasicGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicGraphView.swift; sourceTree = "<group>"; };
 		4DD51D282627450B004F1146 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		4DF2DBD6262BBBFD0059F892 /* GraphExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphExample.swift; sourceTree = "<group>"; };
+		4DF2DBFD262C79780059F892 /* QAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QAView.swift; sourceTree = "<group>"; };
 		5E086DC02051C5A7004D8D25 /* First Taste of Knowledge Graph.playgroundbook */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "First Taste of Knowledge Graph.playgroundbook"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E086DC72051DD03004D8D25 /* BookOverridingBuildSettings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BookOverridingBuildSettings.xcconfig; sourceTree = "<group>"; };
 		5E086DCD2051DDB8004D8D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LiveView.storyboard; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				4DD51D0A26273F0F004F1146 /* GraphView.swift */,
 				4DD51D0426273EBC004F1146 /* EdgeGraphView.swift */,
 				4DD51CFE26273E89004F1146 /* EntityGraphView.swift */,
+				4DF2DBFD262C79780059F892 /* QAView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -673,6 +676,7 @@
 				4DD51D60262890CA004F1146 /* EdgeGraphView.swift in Sources */,
 				4DD51D5F262890CA004F1146 /* EntityGraphView.swift in Sources */,
 				5E3196F32061DEA40077BBD7 /* LiveViewSupport.swift in Sources */,
+				4DF2DBFE262C79780059F892 /* QAView.swift in Sources */,
 				4DF2DBD7262BBBFD0059F892 /* GraphExample.swift in Sources */,
 				4DD51D5C262890CA004F1146 /* SelectionHandler.swift in Sources */,
 				4DD51D63262890CA004F1146 /* Edge.swift in Sources */,

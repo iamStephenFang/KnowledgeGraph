@@ -21,10 +21,9 @@ import UIKit
 import SwiftUI
 import BookCore
 import PlaygroundSupport
-
-public var userGraph: (Graph) -> Graph = { graph in
-//#-end-hidden-code
+var userGraph: (Graph) -> Graph = { graph in
 //#-code-completion(everything, hide)
+//#-end-hidden-code
     let Apple = Entity(text: "Apple")
     let Fruit = Entity(text: "Fruit")
     
@@ -32,11 +31,10 @@ public var userGraph: (Graph) -> Graph = { graph in
     graph.addEntity(Fruit)
     graph.addRelation(Apple, to: Fruit, relation: "Type")
     
-//#-hidden-code
     return graph
 }
-
-KnowledgeGraph = userGraph
+//#-hidden-code
+KnowledgeGraph = userGraph(Graph())
 PlaygroundPage.current.liveView = instantiateLiveView()
 //#-end-hidden-code
 //: ## Precautions

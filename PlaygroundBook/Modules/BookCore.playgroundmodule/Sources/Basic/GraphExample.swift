@@ -52,7 +52,7 @@ public func drawCountryGraph() -> Graph {
   let NeuschwansteinCastle = Entity(text: "Neuschwanstein Castle")
   
   let TheUS = graph.quickAddEntity(Countries, at: graph.pointWithCenter(center: .zero, radius: 400, angle: (0 * 60 + 30) * CGFloat.pi/180.0), relation: "has")
-  graph.updateEntity(TheUS, string: "TheUS")
+    graph.updateEntity(TheUS, text: "TheUS")
   graph.addRelation(TheUS, to: Washington, relation: "Capital")
   graph.positionEntity(Washington, position: graph.positionForNewChild(TheUS, length: 200))
   graph.addRelation(TheUS, to: English, relation: "Official Language")
@@ -61,7 +61,7 @@ public func drawCountryGraph() -> Graph {
   graph.positionEntity(StatueofLiberty, position: graph.positionForNewChild(TheUS, length: 200))
   
   let TheUK = graph.quickAddEntity(Countries, at: graph.pointWithCenter(center: .zero, radius: 350, angle: (1 * 60 + 30) * CGFloat.pi/180.0), relation: "has")
-  graph.updateEntity(TheUK, string: "TheUK")
+  graph.updateEntity(TheUK, text: "TheUK")
   graph.addRelation(TheUK, to: London, relation: "Capital")
   graph.positionEntity(London, position: graph.positionForNewChild(TheUK, length: 200))
   graph.addRelation(TheUK, to: English, relation: "Official Language")
@@ -69,7 +69,7 @@ public func drawCountryGraph() -> Graph {
   graph.positionEntity(BigBen, position: graph.positionForNewChild(London, length: 400))
   
   let China = graph.quickAddEntity(Countries, at: graph.pointWithCenter(center: .zero, radius: 350, angle: (2 * 60 + 30) * CGFloat.pi/180.0), relation: "has")
-  graph.updateEntity(China, string: "China")
+  graph.updateEntity(China, text: "China")
   graph.addRelation(China, to: Beijing, relation: "Capital")
   graph.positionEntity(Beijing, position: graph.positionForNewChild(China, length: 200))
   graph.addRelation(China, to: Madarin, relation: "Official Language")
@@ -78,7 +78,7 @@ public func drawCountryGraph() -> Graph {
   graph.positionEntity(TheGreatWall, position: graph.positionForNewChild(Beijing, length: 400))
   
   let Japan = graph.quickAddEntity(Countries, at: graph.pointWithCenter(center: .zero, radius: 350, angle: (3 * 60 + 30) * CGFloat.pi/180.0), relation: "has")
-  graph.updateEntity(Japan, string: "Japan")
+  graph.updateEntity(Japan, text: "Japan")
   graph.addRelation(Japan, to: Tokyo, relation: "Capital")
   graph.positionEntity(Tokyo, position: graph.positionForNewChild(Japan, length: 200))
   graph.addRelation(Japan, to: Japanese, relation: "Official Language")
@@ -87,7 +87,7 @@ public func drawCountryGraph() -> Graph {
   graph.positionEntity(TokyoTower, position: graph.positionForNewChild(Tokyo, length: 400))
   
   let Germany = graph.quickAddEntity(Countries, at: graph.pointWithCenter(center: .zero, radius: 350, angle: (4 * 60 + 30) * CGFloat.pi/180.0), relation: "has")
-  graph.updateEntity(Germany, string: "Germany")
+  graph.updateEntity(Germany, text: "Germany")
   graph.addRelation(Germany, to: Berlin, relation: "Capital")
   graph.positionEntity(Berlin, position: graph.positionForNewChild(Germany, length: 200))
   graph.addRelation(Germany, to: German, relation: "Official Language")
@@ -96,7 +96,7 @@ public func drawCountryGraph() -> Graph {
   graph.positionEntity(NeuschwansteinCastle, position: graph.positionForNewChild(Germany, length: 200))
   
   let France = graph.quickAddEntity(Countries, at: graph.pointWithCenter(center: .zero, radius: 350, angle: (5 * 60 + 30) * CGFloat.pi/180.0), relation: "has")
-  graph.updateEntity(France, string: "France")
+  graph.updateEntity(France, text: "France")
   graph.addRelation(France, to: Paris, relation: "Capital")
   graph.positionEntity(Paris, position: graph.positionForNewChild(France, length: 200))
   graph.addRelation(France, to: French, relation: "Official Language")

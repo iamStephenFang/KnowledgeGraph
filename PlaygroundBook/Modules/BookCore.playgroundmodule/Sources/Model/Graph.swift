@@ -9,8 +9,16 @@ import Foundation
 import CoreGraphics
 
 public class Graph: ObservableObject {
-    @Published var entities: [Entity] = []
-    @Published var links: [EdgeProxy] = []
+    @Published var entities: [Entity]
+    @Published var links: [EdgeProxy]
+    
+    public init(
+        entities: [Entity] = [],
+        links: [EdgeProxy] = []
+    ) {
+        self.entities = entities
+        self.links = links
+    }
     
     var edges: [Edge] = [] {
         didSet {
@@ -72,16 +80,10 @@ extension Graph {
         entities.append(entity)
     }
     
-    public func addEntitys(_ entitysToAdd: [Entity]) {
-      for entity in entitysToAdd {
+    public func addEntities(_ entitiesToAdd: [Entity]) {
+      for entity in entitiesToAdd {
         entities.append(entity)
       }
-    }
-    
-    public func updateEntity(_ entity: Entity, string: String) {
-      var newEntity = entity
-      newEntity.text = string
-      replace(entity, with: newEntity)
     }
     
     public func deleteEntity(_ entityToDelete: EntityID) {
@@ -108,10 +110,10 @@ extension Graph {
       deleteEntity(entity.id)
     }
 
-    public func updateEntity(_ entity: Entity, relation: String) {
-        var newEntity = entity
-        newEntity.text = relation
-        replace(entity, with: newEntity)
+    public func updateEntity(_ entity: Entity, text: String) {
+      var newEntity = entity
+      newEntity.text = text
+      replace(entity, with: newEntity)
     }
     
     func quickAddEntity(_ entity: Entity, at point: CGPoint? = nil, relation: String) -> Entity {
@@ -147,7 +149,7 @@ extension Graph {
       if abs(deltax) < 0.001 {
         deltax = 0.001
       }
-      let  angle = atan(deltay/abs(deltax))
+      let angle = atan(deltay/abs(deltax))
       return deltax > 0 ? angle: CGFloat.pi - angle
     }
     
@@ -162,7 +164,7 @@ extension Graph {
       return baseAngle + polarity * delta * CGFloat(level)
     }
     
-    func updateRelation(_ parent: Entity, to child: Entity, relation: String){
+    public func updateRelation(_ parent: Entity, to child: Entity, relation: String){
       let newedge = Edge(start: parent.id, end: child.id, text: relation)
       let exists = edges.contains(where: { edge in
         return newedge == edge
@@ -174,6 +176,13 @@ extension Graph {
       var newSet = edges.filter { $0.id != replaceEdge?.id }
       newSet.append(newedge)
       edges = newSet
+    }
+    
+    func getAnswerInfo(entityName: String, relation: String) -> String{
+        let firstEntity = entities.filter{$0.text == entityName}.first
+        let answerEdge = edges.filter { $0.id == firstEntity?.id && $0.text == relation }.first
+        let answerEntity = entities.filter{ $0.id == answerEdge?.end}.first
+        return answerEntity?.text ?? ""
     }
 }
 

@@ -7,7 +7,7 @@
 //
 //#-end-hidden-code
 //: # Introduction to Knowledge Graph
-//: Welcome to *A Tour In Knowledge Graph*, in this swift playground, you will learn some basic ideas about knowledge graph.
+//: Welcome to *First Taste of Knowledge Graph*, in this swift playground, you will learn some basic ideas about knowledge graph.
 //:
 //: Before entering the playground, I want you to think about what is the difference between Information and Knowledge.
 //: - - -

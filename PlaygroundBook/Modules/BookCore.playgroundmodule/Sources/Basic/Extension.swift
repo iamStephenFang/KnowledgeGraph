@@ -40,7 +40,7 @@ extension CGSize {
     }
 }
 
-extension Array {
+public extension Array {
     func randomItem() -> Element {
         let index = Int(arc4random_uniform(UInt32(self.count)))
         return self[index]
@@ -75,5 +75,5 @@ extension UIColor {
     static var pink: UIColor {
         return UIColor(red: 255, green: 45, blue: 85)
     }
-    static let colors: [UIColor] = [.red, .orange, .yellow, .green, .tealBlue, .blue, .purple, .pink]
+    public static let colors: [UIColor] = [.red, .orange, .yellow, .green, .tealBlue, .blue, .purple, .pink]
 }

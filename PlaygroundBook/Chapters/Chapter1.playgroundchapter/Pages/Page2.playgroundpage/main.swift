@@ -7,7 +7,7 @@
 //
 //#-end-hidden-code
 //: # A Knowledge Graph about countries
-//: When you tap and hold on an entity in the Knowledge Graph on the right side, you can see all the **Relation** information related to the **Entity** you have selected from the top of the view, and of course, you can zoom in and out of the Knowledge Graph as well.
+//: When you tap and drag on an entity in the Knowledge Graph on the right side, you can see all the **Relation** information related to the **Entity** you have selected from the top of the view, and of course, you can zoom in and out of the Knowledge Graph as well.
 //:
 //: Suppose you want to know the capital of China, through the triplet "China-Capital-Beijing" you can easily get the answer to the question with other entities information related to Beijing, it is similar to the behavior you search for the capital of China in the online search engine. In fact, many search engines use knowledge graph-related techniques.
 //: ## Storage methods of Knowledge Graph

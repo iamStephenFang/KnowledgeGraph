@@ -8,7 +8,7 @@
 import Foundation
 import CoreGraphics
 
-typealias EdgeID = UUID
+public typealias EdgeID = UUID
 
 struct Edge: Identifiable {
   var id = EdgeID()
@@ -17,8 +17,8 @@ struct Edge: Identifiable {
   var text: String
 }
 
-struct EdgeProxy: Identifiable {
-  var id: EdgeID
+public struct EdgeProxy: Identifiable {
+  public var id: EdgeID
   var start: CGPoint
   var end: CGPoint
   var text: String
