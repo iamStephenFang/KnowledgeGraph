@@ -9,13 +9,6 @@ import SwiftUI
 import BookCore
 import PlaygroundSupport
 
-struct IntroView: View {
-    var body: some View {
-        Image("Intro")
-          .resizable()
-          .aspectRatio(contentMode: .fill)
-    }
-}
 PlaygroundPage.current.setLiveView(IntroView())
 
 

@@ -22,6 +22,8 @@
 		4DD51D64262890CA004F1146 /* EdgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51CF826273E2D004F1146 /* EdgeView.swift */; };
 		4DF2DBD7262BBBFD0059F892 /* GraphExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2DBD6262BBBFD0059F892 /* GraphExample.swift */; };
 		4DF2DBFE262C79780059F892 /* QAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2DBFD262C79780059F892 /* QAView.swift */; };
+		4DF2DC40262D32B90059F892 /* BGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4DF2DC3F262D32B90059F892 /* BGM.mp3 */; };
+		4DF2DC4C262D34B50059F892 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2DC4B262D34B50059F892 /* IntroView.swift */; };
 		5E086DCA2051DDAE004D8D25 /* LiveView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E086DCC2051DDAE004D8D25 /* LiveView.storyboard */; };
 		5E086DD32051E3A3004D8D25 /* Manifest.plist in Copy Book Contents */ = {isa = PBXBuildFile; fileRef = 5E086DCF2051DF0F004D8D25 /* Manifest.plist */; };
 		5E3196F32061DEA40077BBD7 /* LiveViewSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3196F22061DEA40077BBD7 /* LiveViewSupport.swift */; };
@@ -161,6 +163,8 @@
 		4DD51D282627450B004F1146 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		4DF2DBD6262BBBFD0059F892 /* GraphExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphExample.swift; sourceTree = "<group>"; };
 		4DF2DBFD262C79780059F892 /* QAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QAView.swift; sourceTree = "<group>"; };
+		4DF2DC3F262D32B90059F892 /* BGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGM.mp3; sourceTree = "<group>"; };
+		4DF2DC4B262D34B50059F892 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		5E086DC02051C5A7004D8D25 /* First Taste of Knowledge Graph.playgroundbook */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "First Taste of Knowledge Graph.playgroundbook"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E086DC72051DD03004D8D25 /* BookOverridingBuildSettings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BookOverridingBuildSettings.xcconfig; sourceTree = "<group>"; };
 		5E086DCD2051DDB8004D8D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LiveView.storyboard; sourceTree = "<group>"; };
@@ -245,6 +249,7 @@
 				4DD51D0426273EBC004F1146 /* EdgeGraphView.swift */,
 				4DD51CFE26273E89004F1146 /* EntityGraphView.swift */,
 				4DF2DBFD262C79780059F892 /* QAView.swift */,
+				4DF2DC4B262D34B50059F892 /* IntroView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -441,6 +446,7 @@
 		5EF2F9792054B64800191409 /* PrivateResources */ = {
 			isa = PBXGroup;
 			children = (
+				4DF2DC3F262D32B90059F892 /* BGM.mp3 */,
 				4D79301A261B647D0010F4C0 /* icon.png */,
 				5EF2F97E2054B6E400191409 /* ManifestPlist.strings */,
 				5E086DCC2051DDAE004D8D25 /* LiveView.storyboard */,
@@ -611,6 +617,7 @@
 				4D79301B261B647D0010F4C0 /* icon.png in Resources */,
 				5EF2F97C2054B6E400191409 /* ManifestPlist.strings in Resources */,
 				5E551EC52371FC3F00784365 /* Assets.xcassets in Resources */,
+				4DF2DC40262D32B90059F892 /* BGM.mp3 in Resources */,
 				5E086DCA2051DDAE004D8D25 /* LiveView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -685,6 +692,7 @@
 				4DD51D5D262890CA004F1146 /* Graph.swift in Sources */,
 				4DD51D64262890CA004F1146 /* EdgeView.swift in Sources */,
 				4DD51D5B262890CA004F1146 /* Entity.swift in Sources */,
+				4DF2DC4C262D34B50059F892 /* IntroView.swift in Sources */,
 				4DD51D5A262890CA004F1146 /* BasicViewController.swift in Sources */,
 				5EF2F9AE2054BBF300191409 /* LiveViewController.swift in Sources */,
 				4DD51D59262890CA004F1146 /* GraphView.swift in Sources */,

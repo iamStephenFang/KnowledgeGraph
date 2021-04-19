@@ -9,7 +9,7 @@
 //: # Introduction to Knowledge Graph
 //: Welcome to *First Taste of Knowledge Graph*, in this swift playground, you will learn some basic ideas about knowledge graph.
 //:
-//: Before entering the playground, I want you to think about what is the difference between Information and Knowledge.
+//: Before entering the playground, I want you to think about the difference between Information and Knowledge.
 //: - - -
 //: ## The difference between Information and Knowledge
 //: You can find an abstract answer on the right side. Brifely speaking, knowledge can be achieved by establishing the relationship between entities on the basis of information. The entities are usually the real-world objects, events, situations or abstract concepts.
