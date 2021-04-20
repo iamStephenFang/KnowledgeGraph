@@ -133,7 +133,8 @@ extension Graph {
     
     @discardableResult func quickAddEntity(_ entity: Entity,_ entityName: String, at point: CGPoint? = nil, relation: String) -> Entity {
         let target = point ?? entity.position
-        let child = Entity(position: target, text: entityName)
+        var child = Entity(text: entityName)
+        child.position = target
         addEntity(child)
         connect(entity, to: child, relation: relation)
         rebuildLinks()

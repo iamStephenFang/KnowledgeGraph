@@ -19,13 +19,11 @@ public struct Entity: Identifiable {
   var color: UIColor 
   
   public init(
-    position: CGPoint = .zero,
-    text: String = "",
-    color: UIColor = UIColor.colors.randomItem()
+    text: String = ""
   ) {
-    self.position = position
+    self.position = .zero
     self.text = text
-    self.color = color
+    self.color = UIColor.colors.randomItem()
   }
   
 }

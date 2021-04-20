@@ -23,8 +23,11 @@ import PlaygroundSupport
 var userGraph: (Graph) -> Graph = { graph in
 //#-end-hidden-code
 //#-code-completion(everything, hide)
-//#-code-completion(identifier, hide, Page_Contents)
-
+//#-code-completion(identifier, show, graph.addEntity(_ entity: Entity))
+//#-code-completion(identifier, show, graph.addEntities(_ entitiesToAdd: [Entity]))
+//#-code-completion(identifier, show, graph.addRelation(_ entity: Entity, to anotherEntity: Entity, relation: String))
+//#-code-completion(identifier, show, graph.updateRelation(_ firstEntity: Entity, to secondEntity: Entity, relation: String))
+//#-code-completion(identifier, show, graph.deleteEntity(_ entityToDelete: EntityID))
 //#-editable-code
     let Apple = Entity(text: "Apple")
     let Fruit = Entity(text: "Fruit")

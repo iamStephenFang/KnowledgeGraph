@@ -11,7 +11,7 @@
 //:
 //: Before entering the playground, I want you to think about the difference between **Information** and **Knowledge**.
 //: - - -
-//: ## The difference between Information And Knowledge
+//: ## The difference between Information and Knowledge
 //: You can find a visual answer on the right side. Brifely speaking, knowledge can be achieved by establishing the relationship between entities on the basis of information. The entities are usually the real-world objects, events, situations or abstract concepts.
 //:
 //: Now that you know the difference between information and knowledge, I believe that you can understand knowledge graph as well.
