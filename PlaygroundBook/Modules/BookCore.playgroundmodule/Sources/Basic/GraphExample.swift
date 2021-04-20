@@ -8,17 +8,17 @@
 import SwiftUI
 import UIKit
 
-public var KnowledgeGraph = createTriplet(firstEntity: "Apple", nextEntity: "Fruit", relation: "TYPE")
+public var KnowledgeGraph = createTriplet(firstEntity: "Fruit", secondEntity: "Apple", relation: "kind of")
 
 public func createEmptyGraph() -> Graph {
     let graph = Graph()
     return graph
 }
 
-public func createTriplet(firstEntity: String, nextEntity: String, relation: String) -> Graph {
+public func createTriplet(firstEntity: String, secondEntity: String, relation: String) -> Graph {
     let graph = Graph()
     let child1 = Entity(text: firstEntity)
-    let child2 = Entity(text: nextEntity)
+    let child2 = Entity(text: secondEntity)
     graph.addEntity(child1)
     graph.addEntity(child2)
     graph.positionEntity(child1, position: CGPoint(x: 100, y: 0))

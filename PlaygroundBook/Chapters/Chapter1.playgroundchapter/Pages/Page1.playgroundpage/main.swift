@@ -23,7 +23,7 @@ import BookCore
 import PlaygroundSupport
 //#-code-completion(everything, hide)
 //#-end-hidden-code
-KnowledgeGraph = createTriplet(firstEntity: /*#-editable-code*/"Apple"/*#-end-editable-code*/, nextEntity: /*#-editable-code*/"Fruit"/*#-end-editable-code*/, relation: /*#-editable-code*/"Type"/*#-end-editable-code*/)
+KnowledgeGraph = createTriplet(firstEntity: /*#-editable-code*/"Apple"/*#-end-editable-code*/, secondEntity: /*#-editable-code*/"Fruit"/*#-end-editable-code*/, relation: /*#-editable-code*/"Type"/*#-end-editable-code*/)
 //#-hidden-code
 PlaygroundPage.current.liveView = instantiateLiveView()
 //#-end-hidden-code
