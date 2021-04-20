@@ -7,8 +7,6 @@
 import UIKit
 import SwiftUI
 
-public var KnowledgeGraph = drawComposition(firstEntity: "Apple", nextEntity: "Fruit", relation: "is a")
-
 class BasicViewController: UIViewController {
     @Published var graph = KnowledgeGraph
     @Published var selection = SelectionHandler()

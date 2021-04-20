@@ -22,18 +22,27 @@ import SwiftUI
 import BookCore
 import PlaygroundSupport
 var userGraph: (Graph) -> Graph = { graph in
-//#-code-completion(everything, hide)
 //#-end-hidden-code
+//#-code-completion(everything, hide)
+//#-code-completion(identifier, hide, Page_Contents)
+//#-code-completion(identifier, graph.addEntity(), graph.addEntities(), graph.addRelation(), graph.updateRelation(), graph.deleteEntity())
+//#-editable-code
     let Apple = Entity(text: "Apple")
     let Fruit = Entity(text: "Fruit")
+    let Orange = Entity(text: "Orange")
     
-    graph.addEntity(Apple)
     graph.addEntity(Fruit)
-    graph.addRelation(Apple, to: Fruit, relation: "Type")
+    graph.addEntities([Apple, Orange])
     
+    graph.addRelation(Apple, to: Fruit, relation: "Type")
+    graph.addRelation(Orange, to: Fruit, relation: "Type")
+    
+    graph.updateRelation(Apple, to: Fruit, relation: "Kind of")
+    graph.deleteEntity(Orange)
+//#-end-editable-code
+//#-hidden-code
     return graph
 }
-//#-hidden-code
 KnowledgeGraph = userGraph(Graph())
 PlaygroundPage.current.liveView = instantiateLiveView()
 //#-end-hidden-code

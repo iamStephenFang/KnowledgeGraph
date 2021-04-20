@@ -8,12 +8,14 @@
 import SwiftUI
 import UIKit
 
-public func drawEmptyGraph() -> Graph {
+public var KnowledgeGraph = createTriplet(firstEntity: "Apple", nextEntity: "Fruit", relation: "TYPE")
+
+public func createEmptyGraph() -> Graph {
     let graph = Graph()
     return graph
 }
 
-public func drawComposition(firstEntity: String, nextEntity: String, relation: String) -> Graph {
+public func createTriplet(firstEntity: String, nextEntity: String, relation: String) -> Graph {
     let graph = Graph()
     let child1 = Entity(text: firstEntity)
     let child2 = Entity(text: nextEntity)
@@ -25,84 +27,96 @@ public func drawComposition(firstEntity: String, nextEntity: String, relation: S
     return graph
 }
 
-public func drawCountryGraph() -> Graph {
-  let graph = Graph()
-  
-  let Countries = Entity(text: "Countries")
-  graph.addEntity(Countries)
-  
-  let Beijing = Entity(text: "Beijing")
-  let Washington = Entity(text: "Washington, D.C.")
-  let Tokyo = Entity(text: "Tokyo")
-  let Berlin = Entity(text: "Berlin")
-  let London = Entity(text: "London")
-  let Paris = Entity(text: "Paris")
-  
-  let Madarin = Entity(text: "Madarin")
-  let English = Entity(text: "English")
-  let Japanese = Entity(text: "Japanese")
-  let German = Entity(text: "German")
-  let French = Entity(text: "French")
-  
-  let TokyoTower = Entity(text: "Tokyo Tower")
-  let EiffelTower = Entity(text: "EiffelTower")
-  let TheGreatWall = Entity(text: "The Great Wall")
-  let BigBen = Entity(text: "Big Ben")
-  let StatueofLiberty = Entity(text: "Statue of Liberty")
-  let NeuschwansteinCastle = Entity(text: "Neuschwanstein Castle")
-  
-  let TheUS = graph.quickAddEntity(Countries, at: graph.pointWithCenter(center: .zero, radius: 400, angle: (0 * 60 + 30) * CGFloat.pi/180.0), relation: "has")
-    graph.updateEntity(TheUS, text: "TheUS")
-  graph.addRelation(TheUS, to: Washington, relation: "Capital")
-  graph.positionEntity(Washington, position: graph.positionForNewChild(TheUS, length: 200))
-  graph.addRelation(TheUS, to: English, relation: "Official Language")
-  graph.positionEntity(English, position: graph.positionForNewChild(TheUS, length: 200))
-  graph.addRelation(TheUS, to: StatueofLiberty, relation: "Famous Attractions")
-  graph.positionEntity(StatueofLiberty, position: graph.positionForNewChild(TheUS, length: 200))
-  
-  let TheUK = graph.quickAddEntity(Countries, at: graph.pointWithCenter(center: .zero, radius: 350, angle: (1 * 60 + 30) * CGFloat.pi/180.0), relation: "has")
-  graph.updateEntity(TheUK, text: "TheUK")
-  graph.addRelation(TheUK, to: London, relation: "Capital")
-  graph.positionEntity(London, position: graph.positionForNewChild(TheUK, length: 200))
-  graph.addRelation(TheUK, to: English, relation: "Official Language")
-  graph.addRelation(London, to: BigBen, relation: "Landmark")
-  graph.positionEntity(BigBen, position: graph.positionForNewChild(London, length: 400))
-  
-  let China = graph.quickAddEntity(Countries, at: graph.pointWithCenter(center: .zero, radius: 350, angle: (2 * 60 + 30) * CGFloat.pi/180.0), relation: "has")
-  graph.updateEntity(China, text: "China")
-  graph.addRelation(China, to: Beijing, relation: "Capital")
-  graph.positionEntity(Beijing, position: graph.positionForNewChild(China, length: 200))
-  graph.addRelation(China, to: Madarin, relation: "Official Language")
-  graph.positionEntity(Madarin, position: graph.positionForNewChild(China, length: 200))
-  graph.addRelation(Beijing, to: TheGreatWall, relation: "Landmark")
-  graph.positionEntity(TheGreatWall, position: graph.positionForNewChild(Beijing, length: 400))
-  
-  let Japan = graph.quickAddEntity(Countries, at: graph.pointWithCenter(center: .zero, radius: 350, angle: (3 * 60 + 30) * CGFloat.pi/180.0), relation: "has")
-  graph.updateEntity(Japan, text: "Japan")
-  graph.addRelation(Japan, to: Tokyo, relation: "Capital")
-  graph.positionEntity(Tokyo, position: graph.positionForNewChild(Japan, length: 200))
-  graph.addRelation(Japan, to: Japanese, relation: "Official Language")
-  graph.positionEntity(Japanese, position: graph.positionForNewChild(Japan, length: 200))
-  graph.addRelation(Tokyo, to: TokyoTower, relation: "Landmark")
-  graph.positionEntity(TokyoTower, position: graph.positionForNewChild(Tokyo, length: 400))
-  
-  let Germany = graph.quickAddEntity(Countries, at: graph.pointWithCenter(center: .zero, radius: 350, angle: (4 * 60 + 30) * CGFloat.pi/180.0), relation: "has")
-  graph.updateEntity(Germany, text: "Germany")
-  graph.addRelation(Germany, to: Berlin, relation: "Capital")
-  graph.positionEntity(Berlin, position: graph.positionForNewChild(Germany, length: 200))
-  graph.addRelation(Germany, to: German, relation: "Official Language")
-  graph.positionEntity(German, position: graph.positionForNewChild(Germany, length: 200))
-  graph.addRelation(Germany, to: NeuschwansteinCastle, relation: "Famous Attractions")
-  graph.positionEntity(NeuschwansteinCastle, position: graph.positionForNewChild(Germany, length: 200))
-  
-  let France = graph.quickAddEntity(Countries, at: graph.pointWithCenter(center: .zero, radius: 350, angle: (5 * 60 + 30) * CGFloat.pi/180.0), relation: "has")
-  graph.updateEntity(France, text: "France")
-  graph.addRelation(France, to: Paris, relation: "Capital")
-  graph.positionEntity(Paris, position: graph.positionForNewChild(France, length: 200))
-  graph.addRelation(France, to: French, relation: "Official Language")
-  graph.positionEntity(French, position: graph.positionForNewChild(France, length: 200))
-  graph.addRelation(Paris, to: EiffelTower, relation: "Landmark")
-  graph.positionEntity(EiffelTower, position: graph.positionForNewChild(Paris, length: 200))
+public func createCountryGraph() -> Graph {
+    let graph = Graph()
+    
+    let Countries = Entity(text: "Countries")
+    var Beijing = Entity(text: "Beijing")
+    var Washington = Entity(text: "Washington, D.C.")
+    var Tokyo = Entity(text: "Tokyo")
+    var Berlin = Entity(text: "Berlin")
+    var London = Entity(text: "London")
+    var Paris = Entity(text: "Paris")
+    
+    var Madarin = Entity(text: "Madarin")
+    var English = Entity(text: "English")
+    var Japanese = Entity(text: "Japanese")
+    var German = Entity(text: "German")
+    var French = Entity(text: "French")
+    
+    var TokyoTower = Entity(text: "Tokyo Tower")
+    var EiffelTower = Entity(text: "Eiffel Tower")
+    var TheGreatWall = Entity(text: "Great Wall")
+    var ForbiddenCity = Entity(text: "Forbidden City")
+    var BigBen = Entity(text: "Big Ben")
+    var StatueofLiberty = Entity(text: "Statue of Liberty")
+    var NeuschwansteinCastle = Entity(text: "Neuschwanstein Castle")
+    var TowerofLondon = Entity(text: "Tower of London")
+    var LaMarseillaise = Entity(text:"La Marseillaise")
+    var BrandenburgGate = Entity(text:"Brandenburg Gate")
+    var Sakura = Entity(text:"Sakura")
+    
+    graph.addEntity(Countries)
+    graph.addEntities([Beijing,Washington,Tokyo,Berlin,Paris,London])
+    graph.addEntities([Madarin,English,Japanese,German,French])
+    graph.addEntities([TokyoTower,EiffelTower,TheGreatWall,StatueofLiberty,NeuschwansteinCastle,BigBen,TowerofLondon,NeuschwansteinCastle,LaMarseillaise,Sakura])
+    
+    let TheUS = graph.quickAddEntity(Countries, "United States of America", at: graph.pointWithCenter(center: .zero, radius: 350, angle: (0 * 60 + 30) * CGFloat.pi/180.0), relation: "has")
+    graph.addRelation(TheUS, to: Washington, relation: "Capital")
+    Washington = graph.quickPositionEntity(TheUS, newEntity: Washington, length: 300)
+    graph.addRelation(TheUS, to: English, relation: "Official Language")
+    English = graph.quickPositionEntity(TheUS, newEntity: English, length: 300)
+    graph.addRelation(TheUS, to: StatueofLiberty, relation: "Famous Attraction")
+    StatueofLiberty = graph.quickPositionEntity(TheUS, newEntity: StatueofLiberty, length: 300)
+    
+    let TheUK = graph.quickAddEntity(Countries, "The United Kingdom", at: graph.pointWithCenter(center: .zero, radius: 350, angle: (1 * 60 + 30) * CGFloat.pi/180.0), relation: "has")
+    graph.addRelation(TheUK, to: London, relation: "Capital")
+    London = graph.quickPositionEntity(TheUK, newEntity: London, length: 300)
+    graph.addRelation(TheUK, to: English, relation: "Official Language")
+    graph.addRelation(London, to: BigBen, relation: "Landmark")
+    BigBen = graph.quickPositionEntity(London, newEntity: BigBen, length: 300)
+    graph.addRelation(London, to: TowerofLondon, relation: "Cultural Heritage")
+    TowerofLondon = graph.quickPositionEntity(London, newEntity: TowerofLondon, length: 300)
+    
+    let China = graph.quickAddEntity(Countries, "China", at: graph.pointWithCenter(center: .zero, radius: 350, angle: (2 * 60 + 30) * CGFloat.pi/180.0), relation: "has")
+    graph.addRelation(China, to: Madarin, relation: "Official Language")
+    Madarin = graph.quickPositionEntity(China, newEntity: Madarin, length: 300)
+    graph.addRelation(China, to: Beijing, relation: "Capital")
+    Beijing = graph.quickPositionEntity(China, newEntity: Beijing, length: 300)
+    graph.addRelation(Beijing, to: TheGreatWall, relation: "Landmark")
+    TheGreatWall = graph.quickPositionEntity(Beijing, newEntity: TheGreatWall, length: 300)
+    graph.addRelation(Beijing, to: ForbiddenCity, relation: "Cultural Heritage")
+    ForbiddenCity = graph.quickPositionEntity(Beijing, newEntity: ForbiddenCity, length: 300)
+    
+    let Japan = graph.quickAddEntity(Countries, "Japan", at: graph.pointWithCenter(center: .zero, radius: 350, angle: (3 * 60 + 30) * CGFloat.pi/180.0), relation: "has")
+    graph.addRelation(Japan, to: Tokyo, relation: "Capital")
+    Tokyo = graph.quickPositionEntity(Japan, newEntity: Tokyo, length: 300)
+    graph.addRelation(Japan, to: Japanese, relation: "Official Language")
+    Japanese = graph.quickPositionEntity(Japan, newEntity: Japanese, length: 300)
+    graph.addRelation(Tokyo, to: TokyoTower, relation: "Landmark")
+    TokyoTower = graph.quickPositionEntity(Tokyo, newEntity: TokyoTower, length: 300)
+    graph.addRelation(Japan, to: Sakura, relation: "National Flower")
+    Sakura = graph.quickPositionEntity(Japan, newEntity: Sakura, length: 300)
+    
+    let Germany = graph.quickAddEntity(Countries, "Germany", at: graph.pointWithCenter(center: .zero, radius: 350, angle: (4 * 60 + 30) * CGFloat.pi/180.0), relation: "has")
+    graph.addRelation(Germany, to: Berlin, relation: "Capital")
+    Berlin = graph.quickPositionEntity(Germany, newEntity: Berlin, length: 300)
+    graph.addRelation(Berlin, to: BrandenburgGate, relation: "Landmark")
+    BrandenburgGate = graph.quickPositionEntity(Berlin, newEntity: BrandenburgGate, length: 300)
+    graph.addRelation(Germany, to: German, relation: "Official Language")
+    German = graph.quickPositionEntity(Germany, newEntity: German, length: 300)
+    graph.addRelation(Germany, to: NeuschwansteinCastle, relation: "Famous Attraction")
+    NeuschwansteinCastle = graph.quickPositionEntity(Germany, newEntity: NeuschwansteinCastle, length: 300)
+    
+    let France = graph.quickAddEntity(Countries, "France", at: graph.pointWithCenter(center: .zero, radius: 350, angle: (5 * 60 + 30) * CGFloat.pi/180.0), relation: "has")
+    graph.addRelation(France, to: Paris, relation: "Capital")
+    Paris = graph.quickPositionEntity(France, newEntity: Paris, length: 300)
+    graph.addRelation(France, to: French, relation: "Official Language")
+    French = graph.quickPositionEntity(France, newEntity: French, length: 300)
+    graph.addRelation(Paris, to: EiffelTower, relation: "Landmark")
+    EiffelTower = graph.quickPositionEntity(Paris, newEntity: EiffelTower, length: 300)
+    graph.addRelation(France, to: LaMarseillaise, relation: "National Anthem")
+    LaMarseillaise = graph.quickPositionEntity(France, newEntity: LaMarseillaise, length: 300)
 
-  return graph
+    return graph
 }

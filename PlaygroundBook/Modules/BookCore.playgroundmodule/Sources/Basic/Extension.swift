@@ -77,3 +77,40 @@ extension UIColor {
     }
     public static let colors: [UIColor] = [.red, .orange, .yellow, .green, .tealBlue, .blue, .purple, .pink]
 }
+
+extension Triplet {
+    public static let CountryGraphTriplets: [Triplet] = [
+      Triplet(firstEntity: "Countries", secondEntity: "United States of America", relation: "has"),
+      Triplet(firstEntity: "Countries", secondEntity: "The United Kingdom", relation: "has"),
+      Triplet(firstEntity: "Countries", secondEntity: "China", relation: "has"),
+      Triplet(firstEntity: "Countries", secondEntity: "Japan", relation: "has"),
+      Triplet(firstEntity: "Countries", secondEntity: "Germany", relation: "has"),
+      Triplet(firstEntity: "Countries", secondEntity: "France", relation: "has"),
+      
+      Triplet(firstEntity: "China", secondEntity: "Beijing", relation: "Capital"),
+      Triplet(firstEntity: "United States of America", secondEntity: "Washington, D.C.", relation: "Capital"),
+      Triplet(firstEntity: "The United Kingdom", secondEntity: "London", relation: "Capital"),
+      Triplet(firstEntity: "Japan", secondEntity: "Tokyo", relation: "Capital"),
+      Triplet(firstEntity: "Germany", secondEntity: "Berlin", relation: "Capital"),
+      Triplet(firstEntity: "France", secondEntity: "Paris", relation: "Capital"),
+      
+      Triplet(firstEntity: "China", secondEntity: "Madarin", relation: "Official Language"),
+      Triplet(firstEntity: "United States of America", secondEntity: "English", relation: "Official Language"),
+      Triplet(firstEntity: "The United Kingdom", secondEntity: "English", relation: "Official Language"),
+      Triplet(firstEntity: "Japan", secondEntity: "Japanese", relation: "Official Language"),
+      Triplet(firstEntity: "Germany", secondEntity: "German", relation: "Official Language"),
+      Triplet(firstEntity: "France", secondEntity: "French", relation: "Official Language"),
+      
+      Triplet(firstEntity: "Tokyo", secondEntity: "Tokyo Tower", relation: "Landmark"),
+      Triplet(firstEntity: "Paris", secondEntity: "Eiffel Tower", relation: "Landmark"),
+      Triplet(firstEntity: "Beijing", secondEntity: "Great Wall", relation: "Landmark"),
+      Triplet(firstEntity: "Beijing", secondEntity: "Forbidden City", relation: "Cultural Heritage"),
+      Triplet(firstEntity: "London", secondEntity: "Big Ben", relation: "Landmark"),
+      Triplet(firstEntity: "United States of America", secondEntity: "Statue of Liberty", relation: "Famous Attraction"),
+      Triplet(firstEntity: "Germany", secondEntity: "Neuschwanstein Castle", relation: "Famous Attraction"),
+      Triplet(firstEntity: "Berlin", secondEntity: "Brandenburg Gate", relation: "Landmark"),
+      Triplet(firstEntity: "London", secondEntity: "Tower of London", relation: "Cultural Heritage"),
+      Triplet(firstEntity: "France", secondEntity: "La Marseillaise", relation: "National Anthem"),
+      Triplet(firstEntity: "Japan", secondEntity: "Sakura", relation: "National Flower")
+    ]
+}

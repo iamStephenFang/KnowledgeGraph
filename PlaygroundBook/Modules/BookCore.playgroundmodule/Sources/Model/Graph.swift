@@ -49,13 +49,6 @@ public class Graph: ObservableObject {
 }
 
 extension Graph {
-    func positionEntity(_ entity: Entity, position: CGPoint) {
-        var movedEntity = entity
-        movedEntity.position = position
-        replace(entity, with: movedEntity)
-        rebuildLinks()
-    }
-    
     func processEntityTranslation(_ translation: CGSize, entities: [DragInfo]) {
         entities.forEach { draginfo in
             if let entity = entityWithID(draginfo.id) {
@@ -65,8 +58,8 @@ extension Graph {
         }
     }
     
-    func connect(_ parent: Entity, to child: Entity, relation: String) {
-        let newedge = Edge(start: parent.id, end: child.id, text: relation)
+    func connect(_ firstEntity: Entity, to secondEntity: Entity, relation: String) {
+        let newedge = Edge(start: firstEntity.id, end: secondEntity.id, text: relation)
         let exists = edges.contains(where: { edge in
             return newedge == edge
         })
@@ -95,6 +88,20 @@ extension Graph {
       rebuildLinks()
     }
     
+    public func updateRelation(_ firstEntity: Entity, to secondEntity: Entity, relation: String){
+      let newedge = Edge(start: firstEntity.id, end: secondEntity.id, text: relation)
+      let exists = edges.contains(where: { edge in
+        return newedge == edge
+      })
+      guard exists == true else {
+        return
+      }
+      let replaceEdge = edges.filter { $0 == newedge }.first
+      var newSet = edges.filter { $0.id != replaceEdge?.id }
+      newSet.append(newedge)
+      edges = newSet
+    }
+    
     public func addRelation(_ entity: Entity, to anotherEntity: Entity, relation: String){
         let center = entity.position
         let radius = 300.0
@@ -116,13 +123,35 @@ extension Graph {
       replace(entity, with: newEntity)
     }
     
-    func quickAddEntity(_ entity: Entity, at point: CGPoint? = nil, relation: String) -> Entity {
-      let target = point ?? entity.position
-      let child = Entity(position: target, text: "")
-      addEntity(child)
-      connect(entity, to: child, relation: relation)
-      rebuildLinks()
-      return child
+    @discardableResult func positionEntity(_ entity: Entity, position: CGPoint) -> Entity{
+        var movedEntity = entity
+        movedEntity.position = position
+        replace(entity, with: movedEntity)
+        rebuildLinks()
+        return movedEntity
+    }
+    
+    @discardableResult func quickAddEntity(_ entity: Entity,_ entityName: String, at point: CGPoint? = nil, relation: String) -> Entity {
+        let target = point ?? entity.position
+        let child = Entity(position: target, text: entityName)
+        addEntity(child)
+        connect(entity, to: child, relation: relation)
+        rebuildLinks()
+        return child
+    }
+    
+    @discardableResult func quickPositionEntity(_ entity: Entity, newEntity: Entity, length: CGFloat) -> Entity{
+        var movedEntity = newEntity
+        let childEdges = edges.filter { $0.start == entity.id }
+        if let grandparentedge = edges.filter({ $0.end == entity.id }).first, let grandparent = entityWithID(grandparentedge.start) {
+            let baseAngle = angleFrom(start: grandparent.position, end: entity.position)
+            let childBasedAngle = positionForChildAtIndex(childEdges.count, baseAngle: baseAngle)
+            let newpoint = pointWithCenter(center: entity.position, radius: length, angle: childBasedAngle)
+            movedEntity.position = newpoint
+        }
+        replace(newEntity, with: movedEntity)
+        rebuildLinks()
+        return movedEntity
     }
     
     func pointWithCenter(center: CGPoint, radius: CGFloat, angle: CGFloat) -> CGPoint {
@@ -130,17 +159,6 @@ extension Graph {
       let deltay = radius*sin(angle)
       let newpoint = CGPoint(x: center.x + deltax, y: center.y + deltay)
       return newpoint
-    }
-    
-    func positionForNewChild(_ parent: Entity, length: CGFloat) -> CGPoint {
-      let childEdges = edges.filter { $0.start == parent.id }
-      if let grandparentedge = edges.filter({ $0.end == parent.id }).first, let grandparent = entityWithID(grandparentedge.start) {
-        let baseAngle = angleFrom(start: grandparent.position, end: parent.position)
-        let childBasedAngle = positionForChildAtIndex(childEdges.count, baseAngle: baseAngle)
-        let newpoint = pointWithCenter(center: parent.position, radius: length, angle: childBasedAngle)
-        return newpoint
-      }
-      return CGPoint(x: 200, y: 200)
     }
     
     func angleFrom(start: CGPoint, end: CGPoint) -> CGFloat {
@@ -162,20 +180,6 @@ extension Graph {
 
       let delta = CGFloat.pi/6.0 + jitter
       return baseAngle + polarity * delta * CGFloat(level)
-    }
-    
-    public func updateRelation(_ parent: Entity, to child: Entity, relation: String){
-      let newedge = Edge(start: parent.id, end: child.id, text: relation)
-      let exists = edges.contains(where: { edge in
-        return newedge == edge
-      })
-      guard exists == true else {
-        return
-      }
-      let replaceEdge = edges.filter { $0 == newedge }.first
-      var newSet = edges.filter { $0.id != replaceEdge?.id }
-      newSet.append(newedge)
-      edges = newSet
     }
     
     func getAnswerInfo(entityName: String, relation: String) -> String{

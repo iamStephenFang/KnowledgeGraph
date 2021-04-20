@@ -15,6 +15,8 @@
 //: ### Disclaimer:
 //: Some of the code was inspired by, and modified from, a tutorial written by Warren Burton on the Raywenderlich website.
 //:
+//: Intro background music is from Royalty Free, free music library, provided by Purple Planet Music.
+//:
 //: The design of “First Taste of Knowledge Graph” playground was done by Stephen Fang (Xuanmiao Fang).
 //:
 //: “First Taste of Knowledge Graph” is a project by Stephen Fang (Xuanmiao Fang).

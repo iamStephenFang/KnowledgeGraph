@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D79301B261B647D0010F4C0 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D79301A261B647D0010F4C0 /* icon.png */; };
+		4DA5A37A262E619E0014423B /* Triplet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA5A379262E619E0014423B /* Triplet.swift */; };
 		4DD51D59262890CA004F1146 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51D0A26273F0F004F1146 /* GraphView.swift */; };
 		4DD51D5A262890CA004F1146 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51D282627450B004F1146 /* BasicViewController.swift */; };
 		4DD51D5B262890CA004F1146 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD51CD026273A8B004F1146 /* Entity.swift */; };
@@ -149,6 +150,7 @@
 
 /* Begin PBXFileReference section */
 		4D79301A261B647D0010F4C0 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		4DA5A379262E619E0014423B /* Triplet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triplet.swift; sourceTree = "<group>"; };
 		4DD51CD026273A8B004F1146 /* Entity.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; tabWidth = 2; };
 		4DD51CD626273ABD004F1146 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		4DD51CDC26273C2C004F1146 /* EntityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityView.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				4DD51CD026273A8B004F1146 /* Entity.swift */,
 				4DD51CEC26273DB8004F1146 /* Graph.swift */,
 				4DD51CF226273DFA004F1146 /* Edge.swift */,
+				4DA5A379262E619E0014423B /* Triplet.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -679,6 +682,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DA5A37A262E619E0014423B /* Triplet.swift in Sources */,
 				4DD51D62262890CA004F1146 /* BasicGraphView.swift in Sources */,
 				4DD51D60262890CA004F1146 /* EdgeGraphView.swift in Sources */,
 				4DD51D5F262890CA004F1146 /* EntityGraphView.swift in Sources */,

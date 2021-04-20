@@ -18,7 +18,7 @@ public struct IntroView: View {
     public var body: some View {
         Image("Intro")
             .resizable()
-            .aspectRatio(contentMode: .fill)
+            .aspectRatio(contentMode: .fit)
             .onAppear {
                 let sound = Bundle.main.path(forResource: "BGM", ofType: "mp3")
                 self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
