@@ -7,15 +7,14 @@
 //
 //#-end-hidden-code
 //: # Create your Knowledge Graph
-//: On this page, you will try to construct a knowledge graph in the form of functions. Related operations have been encapsulated by functions. Please refer to the following steps to write your code.
+//: On this page, you will try to create a knowledge graph in the form of functions. Related operations have been encapsulated by functions, please refer to the following steps to write your code.
 //:
-//: Suppose you want to know the capital of China, through the triplet "China-Capital-Beijing" you can easily get the answer to the question with other entities information related to Beijing, it is similar to the behavior you search for the capital of China in the online search engine. In fact, many search engines use knowledge graph-related techniques.
 //: ### Step One
-//: The first step is to create an entity object and add it to the graph object.
+//: The first step is to create an **Entity** object, be sure to give it a text identifier, such as 'Apple', then use function `graph.addEntity()` or `graph.addEntities()` to add your entity to the graph, the latter will add entities in the form of an array.
 //: ### Step Two
-//: The second step is to create relational objects and connect related entities
+//: The second step is to create **Relation** objects by calling function `graph.addRelation()`, the parameters accepted by this function are the first Entity, the second Entity, and the name of the relation. If you have written a long piece of code and want to change one of the relation, you can call the function `graph.updateRelation()` to update. The parameters accepted by the two functions are the same.
 //: ### Step Three
-//: If you need to change the entity or relationship information created in the previous two steps, you can use the following functions to modify the created graph object.
+//: The position of **Relation** in the graph is randomly generated from the position of the established **Entity**. If you are not satisfied with the position of the entity, you can change its position by dragging. If you decide to delete an Entity, you can call the function `graph.deleteEntity()` to delete it, this function will delete all relations related to the entity.
 //#-hidden-code
 import UIKit
 import SwiftUI
@@ -25,7 +24,6 @@ var userGraph: (Graph) -> Graph = { graph in
 //#-end-hidden-code
 //#-code-completion(everything, hide)
 //#-code-completion(identifier, hide, Page_Contents)
-//#-code-completion(identifier, graph.addEntity(), graph.addEntities(), graph.addRelation(), graph.updateRelation(), graph.deleteEntity())
 //#-editable-code
     let Apple = Entity(text: "Apple")
     let Fruit = Entity(text: "Fruit")
@@ -46,7 +44,10 @@ var userGraph: (Graph) -> Graph = { graph in
 KnowledgeGraph = userGraph(Graph())
 PlaygroundPage.current.liveView = instantiateLiveView()
 //#-end-hidden-code
-//: ## Precautions
-//:- The newly created entity appears in the middle of the screen by default, which means that if you do not create a relationship for the created entity, the entity will remain in the middle
-//:- You can drag, zoom in or zoom out the entity and the graph as a whole
+/*:
+ * callout(
+ Precautions):
+The newly created entity appears in the middle of the screen by default, which means if you do not create a relation for the created entity, the entity will remain in the middle of the graph.
+ */
+//:
 //: ## [Next page](@next)

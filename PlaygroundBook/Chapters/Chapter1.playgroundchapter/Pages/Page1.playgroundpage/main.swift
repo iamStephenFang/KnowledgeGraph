@@ -14,7 +14,7 @@
 //: **Entities** refer to things in the real world such as people, place names, concepts, etc., while **relationship**s are used to describe some kind of connection between different entities.
 //:
 //: In a knowledge graph, two nodes can be connected together with an undirected edge if there is some kind of relationship between them. Here the nodes are entities and the edge between two nodes is called a relationship.
-//: ## Instructions
+//: ## Challenge
 //: You can create the basic structure of knowledge graph by completing the code below. After the code runs successfully, you can freely **drag and drop** the entities or zoom in or zoom out the entire knowledge graph.
 //#-hidden-code
 import UIKit

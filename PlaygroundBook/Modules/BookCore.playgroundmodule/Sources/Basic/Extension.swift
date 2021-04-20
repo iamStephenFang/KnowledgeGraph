@@ -80,12 +80,12 @@ extension UIColor {
 
 extension Triplet {
     public static let CountryGraphTriplets: [Triplet] = [
-      Triplet(firstEntity: "Countries", secondEntity: "United States of America", relation: "has"),
-      Triplet(firstEntity: "Countries", secondEntity: "The United Kingdom", relation: "has"),
-      Triplet(firstEntity: "Countries", secondEntity: "China", relation: "has"),
-      Triplet(firstEntity: "Countries", secondEntity: "Japan", relation: "has"),
-      Triplet(firstEntity: "Countries", secondEntity: "Germany", relation: "has"),
-      Triplet(firstEntity: "Countries", secondEntity: "France", relation: "has"),
+      Triplet(firstEntity: "Countries", secondEntity: "United States of America", relation: "contain"),
+      Triplet(firstEntity: "Countries", secondEntity: "The United Kingdom", relation: "contain"),
+      Triplet(firstEntity: "Countries", secondEntity: "China", relation: "contain"),
+      Triplet(firstEntity: "Countries", secondEntity: "Japan", relation: "contain"),
+      Triplet(firstEntity: "Countries", secondEntity: "Germany", relation: "contain"),
+      Triplet(firstEntity: "Countries", secondEntity: "France", relation: "contain"),
       
       Triplet(firstEntity: "China", secondEntity: "Beijing", relation: "Capital"),
       Triplet(firstEntity: "United States of America", secondEntity: "Washington, D.C.", relation: "Capital"),
