@@ -102,14 +102,14 @@ extension Graph {
       edges = newSet
     }
     
-    public func addRelation(_ entity: Entity, to anotherEntity: Entity, relation: String){
+    public func addRelation(_ entity: Entity, to secondEntity: Entity, relation: String){
         let center = entity.position
         let radius = 300.0
         let angle = CGFloat.random(in: 1.0..<360.0) * CGFloat.pi/180.0
         let point = CGPoint(x: center.x + CGFloat(radius) * cos(angle), y: center.y + CGFloat(radius) * sin(angle))
         
-        self.positionEntity(anotherEntity, position: point)
-        connect(entity, to: anotherEntity, relation: relation)
+        self.positionEntity(secondEntity, position: point)
+        connect(entity, to: secondEntity, relation: relation)
         rebuildLinks()
     }
     
@@ -117,7 +117,7 @@ extension Graph {
       deleteEntity(entity.id)
     }
 
-    public func updateEntity(_ entity: Entity, text: String) {
+    func updateEntity(_ entity: Entity, text: String) {
       var newEntity = entity
       newEntity.text = text
       replace(entity, with: newEntity)
@@ -190,5 +190,3 @@ extension Graph {
         return answerEntity?.text ?? ""
     }
 }
-
-
